@@ -16,6 +16,21 @@
         <button id="colorButton">背景色を変える</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // ボタンと背景（body）の要素を取得
+        const button = document.getElementById('colorButton');
+        const body = document.body;
+
+        // ボタンをクリックした時の処理
+        button.addEventListener('click', () => {
+            // ランダムな色を生成
+            const randomColor = `hsl(${Math.random() * 360}, 70%, 80%)`;
+    
+            // 背景色を更新
+            body.style.backgroundColor = randomColor;
+    
+            console.log("背景色を変更しました！");
+        });
+    </script>
 </body>
 </html>
